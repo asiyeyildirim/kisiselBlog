@@ -1,0 +1,152 @@
+<!DOCYTPE html>	
+
+<html>
+<head>
+	<meta charset= "utf-8" src="denemelerim.css"/>
+<!--sayfa tasarımlarım için css dosyama bağlanacağım bir link ekliyorum -->
+<link rel="stylesheet" type="text/css" href="denemelerim.css">
+<link href="https://fonts.googleapis.com/css?family=Aladin&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Changa+One&display=swap" rel="stylesheet">
+<script src="jquery-3.4.1.min.js"></script>
+<title>Hayata Dair</title>
+
+
+</head>
+
+<body background>
+
+	<nav>
+<style>
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#2a4480;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="YanMenu" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+
+  &times;</a>
+  <img src="asiye.2.jpg" width="245" height="260" 
+target="_self"style="border-radius:20px;margin-left:3px;
+margin-top:30px;"
+  />
+  <br/>
+  <br/>
+  <br/>
+
+ <a href target="_blank"style="font-family: 'Changa One', cursive;">Ben Kimim?</a>
+   <a href="mailto:asiyeeyildirim71@gmail.com" target="_blank"style="font-family: 'Changa One', cursive;">E-Mail</a>
+    <a href="https://www.instagram.com/asiyee_yildirim/" target="_blank"style="font-family: 'Changa One', cursive;">Instagram</a>
+</div>
+<div id="clock"></div>
+
+<!--anasayfada gözüken saat ve tarih-->
+<script type="text/javascript">
+function refrClock()
+{
+var d=new Date();
+var s=d.getSeconds();
+var m=d.getMinutes();
+var h=d.getHours();
+var day=d.getDay();
+var date=d.getDate();
+var month=d.getMonth();
+var year=d.getFullYear();
+var days=new Array("Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi");
+var months=new Array("Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık");
+if (s<10) {s="0" + s}
+if (m<10) {m="0" + m}
+document.getElementById("clock").innerHTML= "<b>Tarih:</b> " + date + " " + months[month] + " " + year + " | <b>Gün:</b> " + days[day] + " | <b>Saat:</b> " + h + ":" + m + ":" + s + " "
+setTimeout("refrClock()",1000);
+}
+refrClock();
+</script>
+
+<!--açılır menü oluşumu-->
+
+<div id="main">
+
+  <span style="font-size:30px;cursor:pointer;font-family: 'Aladin', cursive;" onclick="openNav()">
+
+  &#9776; 
+
+ASİYE YILDIRIM</span>
+</a>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("YanMenu").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("YanMenu").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+   
+</body>
+</html>
+
+<!--butonların oluşumu--> 
+      <button class="button1">Anasayfa</button>
+      <button class="button button2">Denemelerim</button>
+      <button class="button button3">Hakkımda</button>
+  <hr/>
+   
+<form><!--arama butonu oluşumu--> 
+   <div id="box">
+       <input type="text" id="search" placeholder="Ara..">
+       <i class="fa fa-search"></i>
+   </div>
+</form>
+
+<br/>
+<br/>
+<br/>
+<br/>

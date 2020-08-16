@@ -1,0 +1,199 @@
+<!DOCYTPE html>	
+<html>
+<head>
+	<meta charset= "utf-8" src="anasayfa.css"/>
+<!--sayfa tasarımlarım için css dosyama bağlanacağım bir link ekliyorum -->
+<link rel="stylesheet" type="text/css" href="anasayfa.css">
+<link href="https://fonts.googleapis.com/css?family=Aladin&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Changa+One&display=swap" rel="stylesheet">
+<script src="jquery-3.4.1.min.js"></script>
+<title>Hayata Dair</title>
+
+
+</head>
+
+<body background>
+
+	<nav>
+<style>
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#2a4480;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="YanMenu" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+
+  &times;</a>
+  <img src="asiye.2.jpg" width="245" height="260" 
+target="_self"style="border-radius:20px;margin-left:3px;
+margin-top:30px;"
+  />
+  <br/>
+  <br/>
+  <br/>
+
+ <a href target="_blank"style="font-family: 'Changa One', cursive;">Ben Kimim?</a>
+   <a href="mailto:asiyeeyildirim71@gmail.com" target="_blank"style="font-family: 'Changa One', cursive;">E-Mail</a>
+    <a href="https://www.instagram.com/asiyee_yildirim/" target="_blank"style="font-family: 'Changa One', cursive;">Instagram</a>
+</div>
+<div id="clock"></div>
+
+<!--anasayfada gözüken saat ve tarih-->
+<script type="text/javascript">
+function refrClock()
+{
+var d=new Date();
+var s=d.getSeconds();
+var m=d.getMinutes();
+var h=d.getHours();
+var day=d.getDay();
+var date=d.getDate();
+var month=d.getMonth();
+var year=d.getFullYear();
+var days=new Array("Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi");
+var months=new Array("Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık");
+if (s<10) {s="0" + s}
+if (m<10) {m="0" + m}
+document.getElementById("clock").innerHTML= "<b>Tarih:</b> " + date + " " + months[month] + " " + year + " | <b>Gün:</b> " + days[day] + " | <b>Saat:</b> " + h + ":" + m + ":" + s + " "
+setTimeout("refrClock()",1000);
+}
+refrClock();
+</script>
+
+<!--açılır menü oluşumu-->
+
+<div id="main">
+
+  <span style="font-size:30px;cursor:pointer;font-family: 'Aladin', cursive;" onclick="openNav()">
+
+  &#9776; 
+
+ASİYE YILDIRIM</span>
+</a>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("YanMenu").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("YanMenu").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+   
+</body>
+</html>
+
+<!--butonların oluşumu--> 
+      <button class="button1">Anasayfa</button>
+      <button class="button button2">Denemelerim</button>
+      <button class="button button3">Hakkımda</button>
+  <hr/>
+   
+<form><!--arama butonu oluşumu--> 
+   <div id="box">
+       <input type="text" id="search" placeholder="Ara..">
+       <i class="fa fa-search"></i>
+   </div>
+</form>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div id="pencerekodu">
+
+
+  <label for="pencere" class="dugme">
+<div class="image">
+    <img src="genclik.jpg" width="245" height="260" 
+target="_self"style="border-radius:0px;margin-left:103px
+;
+margin-top:0px;">
+
+</div>
+</label>
+
+<input type="checkbox" class="Pencereac" id="pencere" name="pencere"></input>
+<label class="pencere">
+         &nbspDOSTLUK                                                  
+    <br/>
+    <br/>
+Bazen her şeyin farklı olmasını isterdim diye düşünüyorum…Birçok insanın da bunu düşündüğünü biliyorum. İnsanın elinde olmayan sebeplerin, sonuçlarına katlanması gerekiyor birçok zaman…Hayat oyununu oynuyor biz de karşıdan seyrediyor gibiyiz.
+
+
+İnsan çabalıyor, sevdiği insanlar hiç eksilmesin istiyor yanından. Yıllar geçecek ve o zaman anlaşılacak yeri dolmayanların… Yılların sadece sayılardan oluşmadığı, yaşanılan güzel anıların onları oluşturduğunu bilsek keşke. Dostlarımız varken değerlerini anlasak. Sırtımızı onlara dönmesek, onlar da bizi sırtımızdan vurmasa keşke😊Düşünüyorum da biz sevgimizi göstermekten çekinmedikçe onlar da kırmaktan çekinmiyor fakat iş dostluğa, sadakate gelince sahnede bizden başka kimse kalmıyor. Oyunu tek başımıza sırtlanıyoruz sonra da  o engin “Dostluk” dağlarını tırmanamıyoruz  bi’ türlü . Yarı yolda kalıyoruz,  arkamıza bakıyoruz: kimse yok! Hayat denen bu yolda her zaman olduğu gibi yine yalnızız…Hatalar, pişmanlıklar ve nankörlükler ruhumuzu yoruyor ama biz yine  belli etmiyoruz. Keşke onlar anlasa diyoruz hani şu çok sevdiğimiz dostlarımız var ya onlar… ama anlamıyorlar. Biz onların  düşüncelerini bile okuyabiliyorken onlar bizi kırdıklarını bile anlamıyorlar…Sonra her seferinde sen değişmişsin cümleleri yankılanıyor etrafımızda. Oysa biz değil, siz değişmişsiniz…Bize kalbinizi göstermeyi bırakmışsınız, içtenliğinizi göstermeyi…İnsan bunları farkedince kendine yönelmeye başlıyor, çabalamayı bırakmaya …
+
+
+Hayat garip…Girdaplı yolları, derin çukurları ve sınırsız gökyüzü var ama insanın içini iyileştiren tek bi’ şeyi var: Zaman. Belki bazı şeyleri düzeltmek için belki de tamamen onlardan uzaklaşmak için tek kaynağımız…Siz onu nasıl kullanırsınız?  Dostlarınızı affetmek için mi yoksa onca güzel anılarınıza rağmen unutmak için mi?
+<br/>
+<br/>
+<br/>
+<label for="pencere" class="dugme" name="kapat">Kapat</label>
+</label>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+   
+
+
+
+
+</body>
+</html>
